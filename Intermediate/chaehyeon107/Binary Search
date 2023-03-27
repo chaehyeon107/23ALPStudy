@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int arr1[500002];
+int arr2[500002];
+int n, m;
+
+int main(void) {
+	cin >> n;
+	for (int i = 0; i < n; i++)
+		cin >> arr1[i];
+	cin >> m;
+	sort(arr1, arr1 + n);
+	for (int i = 0; i < m; i++)
+		cin >> arr2[i];
+	for(int i = 0; i < m; i++) 	
+		cout << binary_search(arr1, arr1 + n, arr2[i]) << " ";
+}
